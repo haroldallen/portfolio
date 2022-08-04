@@ -1,2 +1,2 @@
 # foxl.design
- My personal portfolio & contact website.
+ My personal portfolio & contact website - https://foxl.design.
