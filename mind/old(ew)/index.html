@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Foxlmind | Foxl Design</title>
+    <meta name="description" content="foxlldev's portfolio - foxl.design.">
+    <link rel="icon" type="image/png" sizes="750x750" href="./icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gantari:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/d5db5a9cd6.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/style.css">
+
+    <!-- Discord -->
+    <meta content="Foxlmind | Foxl Design" property="og:title">
+    <meta content="An epic note keeping & to-do app made in Electron by foxlldev." property="og:description">
+    <meta content="https://foxl.design/mind/" property="og:url">
+    <meta content="https://foxl.design/assets/pfp.png" property="og:image">
+    <meta content="#3f6aaa" data-react-helmet="true" name="theme-color">
+</head>
+<body>
+    <div id="image-popup" class="image-popup" onclick="closeImagePopup()"><div class="image-popup-bg"></div><img id="image-popup-img" class="image-popup-img"><p id="image-popup-cate">Click anywhere to exit</p></div>
+
+    <div class="content" id="content">
+        <div id="header" class="header">
+            <div class="header-left">
+                <a href="/mind" class="header-item header-title">Foxlmind</a>
+            </div>
+            <div class="header-right">
+                <a href="/mind#downloads" class="header-item">Download</a>
+            </div>
+        </div>
+        <div id="splosh" class="splosh">
+            <div class="splosh-content-wrapper">
+                <div class="splosh-content">
+                    <h1 class="splosh-title">Never forget a task again</h1>
+                    <a href="#summary" class="splosh-button button">LEARN MORE</a>
+                    <a href="#downloads" class="splosh-button button">DOWNLOAD</a>
+                </div>
+            </div>
+            <svg class="splosh-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path class="splosh-waves-path" fill-opacity="1" d="M0,96L80,117.3C160,139,320,181,480,165.3C640,149,800,75,960,64C1120,53,1280,107,1360,133.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+            </svg>
+        </div>
+        <div id="summary" class="summary">
+            <div class="summary-content">
+                <div class="summary-item">
+                    <img class="summary-item-image image-popup-opener" src="./assets/media/json_storage.png" onclick="openImagePopup('./assets/media/json_storage.png')">
+                    <div class="summary-item-caption">
+                        <p class="summary-item-title">Totally local, maximum privacy</p>
+                        <p class="summary-item-desc">We don't collect any data about you - you don't even need to log in to use Foxlmind - and your posts are stored locally (on your computer).
+                            <br>Don't trust us? <a href="https://github.com/foxlldev/Foxlmind">Check our source code on GitHub</a>.</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img class="summary-item-image image-popup-opener" src="./assets/media/notes_and_todos.png" onclick="openImagePopup('./assets/media/notes_and_todos.png')">
+                    <div class="summary-item-caption">
+                        <p class="summary-item-title">Notes & To-dos. In one app.</p>
+                        <p class="summary-item-desc">It's easy to remember anything with Foxlmind - whether it's in need of an in-depth explanation or simple steps.</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img class="summary-item-image image-popup-opener" src="./assets/media/notes_and_todos-themes.png" onclick="openImagePopup('./assets/media/notes_and_todos-themes.png')">
+                    <div class="summary-item-caption">
+                        <p class="summary-item-title">Themes? No problem!</p>
+                        <p class="summary-item-desc">With dark, light and custom themes (coming soon), Foxlmind can look any way you want it to.</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img class="summary-item-image image-popup-opener" src="./assets/media/notes_and_todos-light_theme.png" onclick="openImagePopup('./assets/media/notes_and_todos-light_theme.png')">
+                    <div class="summary-item-caption">
+                        <p class="summary-item-title">Simple design</p>
+                        <p class="summary-item-desc">Foxlmind has a simple design, which still proves to be great-looking and efficient.</p>
+                    </div>
+                </div>
+                <div class="summary-item">
+                    <img class="summary-item-image image-popup-opener" src="./assets/media/completed.png" onclick="openImagePopup('./assets/media/completed.png')">
+                    <div class="summary-item-caption">
+                        <p class="summary-item-title">Completion doesn't mean deletion</p>
+                        <p class="summary-item-desc">You can view your completed posts in the Completed page, choose to mark them as uncompleted or permenantly delete them.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="downloads">
+            <div class="downloads-content">
+                <h1 class="downloads-title">Ready to get Foxlmind?</h1>
+                <p class="downloads-desc">We're not quite done with Foxlmind yet, but you can still <a class="downloads-link" href="https://github.com/foxlldev/Foxlmind/releases">download our betas on GitHub</a>.
+                    <br>Need help? <a class="downloads-link" href="/#contact">Contact us</a>.</p>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>
