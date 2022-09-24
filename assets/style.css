@@ -10,15 +10,22 @@ body, html {
 
 a {
     color: skyblue;
+    text-decoration: none;
+    border-bottom: 1px dashed skyblue;
     transition: 0.2s;
 }
 a:hover {
     color: rgb(220, 182, 255);
+    border-bottom: 1px solid rgb(220, 182, 255);
 }
 
 section {
     min-height: 100vh;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 section h1 {
     margin: 5px;
@@ -29,10 +36,6 @@ section h1 {
 /* intro */
 .intro {
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: #eef5fd;
 }
 .intro-name {
@@ -41,7 +44,7 @@ section h1 {
     align-items: center;
 }
 .intro-pfp {
-    width: 20vw;
+    width: 175px;
     border: 3px solid rgb(23, 33, 51);
     border-radius: 100%;
 }
@@ -57,18 +60,16 @@ section h1 {
     font-size: 24px;
     font-weight: 500;
 }
-.down-wrapper { margin-top: 50px; transition: 0.2s; transition-delay: 0.05s; }
-.down-wrapper:hover { transform: rotate(360deg); }
+.down-wrapper { border: none; }
+.down-wrapper:hover { border:none; }
+.down-wrapper.mt { margin-top: 50px; }
 .down-wrapper:focus { outline: none; }
+.down { transition: 0.2s; transition-delay: 0.025s; }
+.down-wrapper:hover > .down { transform: rotate(360deg); }
 
 /* skills */
-section.skills {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 div.skills {
+    margin-top: 50px;
     max-width: 450px;
     display: flex;
     flex-wrap: wrap;
@@ -101,11 +102,10 @@ div.skills {
 }
 
 /* projects */
-section.projects {
-    display: grid;
-    place-items: center;
-}
 div.projects {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +122,7 @@ div.projects {
     border: 2px solid rgb(23, 33, 51);
     border-radius: 10px;
 }
+.project:hover { border: 2px solid rgb(23, 33, 51); }
 .project img { max-height: 225px; border-radius: 10px; }
 .project img.extra { max-height: 205px; padding: 10px; }
 .project span {
@@ -150,10 +151,22 @@ div.projects {
 }
 
 /* contact */
-section.contact {
-    display: grid;
-    place-items: center;
-}
 div.contact {
-    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.contact-item {
+    color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+
+    border-bottom: none;
+    font-size: 22px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+.contact-item:hover { border-bottom: none; }
+.contact-item i { margin-right: 15px; width: 40px; text-align: center; }
