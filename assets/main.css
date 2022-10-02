@@ -1,0 +1,138 @@
+html,body {
+	padding: 0;
+	margin: 0;
+	background-color: #000;
+	color: #fff;
+	font-family: Monospace;
+	font-size: 13px;
+	overflow: hidden;
+}
+
+.content {
+	margin: 0;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.section-wrapper {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.intro-wrapper {
+	top: 0;
+	justify-content: flex-end;
+}
+.skills-wrapper {
+	top: 100vh;
+	justify-content: flex-start;
+}
+
+
+.skills { width: 100%; display: flex; flex-direction: column; }
+.skill { position: relative; margin: 3px; }
+.skill .progress {
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	min-width: 1%;
+	background-color: rgba(203, 126, 255, 0.5);
+}
+.skill .text {
+	padding: 3px;
+	padding-left: 6px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 16px;
+}
+.skill .text span { z-index: 1; margin: 0; }
+.skill .text .name { font-weight: 600; margin-right: 10px; }
+.skill .text .name i.m { margin-right: 2px; }
+.skill .text .name i.im { margin-right: -1px; }
+
+
+.projects-wrapper {
+	top: 200vh;
+	justify-content: flex-start;
+}
+/* dont ask */
+.projects .projects {
+	display: flex;
+}
+.project {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+
+}
+.project img { height: 75px; width: 75px; }
+.project label { font-weight: 600; font-size: 15px;}
+.project span { color: #bdbdbd;}
+.project a { background-color: blue; padding: 5px; padding-top: 3.5px;}
+
+.contact-wrapper {
+	top: 300vh;
+	justify-content: flex-end;
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.contacts .method {
+	display: flex;
+	align-items: center;
+	margin: 5px;
+	font-size: 24px;
+	text-decoration: none;
+}
+.contacts .method div {
+	width: 30px;
+	display: grid;
+	place-items: center;
+}
+.contacts .method span {
+	font-size: 20px;
+	color: purple;
+	margin-left: 7px;
+	text-decoration: underline;
+}
+
+.section {
+	max-width: 75%;
+	background-color: rgba(14,14,14,0.35);
+	backdrop-filter: blur(200px);
+	padding: 2em;
+}
+.section h1 { color: white; }
+.section * { margin: 1px; color: #d9d9d9; }
+
+
+a, button, input, select {
+	pointer-events: auto;
+}
+#notSupported {
+	width: 50%;
+	margin: auto;
+	background-color: #f00;
+	margin-top: 20px;
+	padding: 10px;
+}
