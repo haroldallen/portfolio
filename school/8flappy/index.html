@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You wanted a game?</title>
+</head>
+<body>
+    <h1>You wanted a game?</h1>
+    <p>You wanted a game, so here you go. Press [SPACE] to jump.</p>
+    <div class="game" id="game">
+        <div class="obstacles" id="game-obstacles"></div>
+        <img src="./bird.png" height="100px" width="100px" id="bird">
+    </div>
+
+    <script>
+        var birdpos = -50;
+        let count = 0;
+        let left = window.innerWidth;
+
+        function obstacles() {
+            let w = document.getElementById('game-obstacles');
+            if (w.children.length > 0) {
+                left = (w.children[0].style.left.slice(0, w.children[0].style.left.length - 2) - 10);
+                for(let i=0; i<w.children.length; i++) {
+                    let id = parseInt(w.children[i].id.slice(14, w.children[i].id.length));
+                    console.log(id, id+1)
+                    let e = document.getElementById('obstaclegroup-'+id);
+                    // move obstacle off screen by decreasing its left value
+                    e.style.left = left + "px";
+                    // check if off screen
+                    let a = e.style;
+                    if ((parseInt(a.left.slice(0, a.left.length - 2)) + parseInt(a.marginLeft.slice(0, a.marginLeft.length - 2))) < -160) {
+                        // spawn new one
+                        addObstacle(w, true);
+
+                        // add marginLeft of one after to left of one after
+                        let ea = document.getElementById('obstaclegroup-'+(id+1));
+                        if (ea !== null) {
+                            ea.style.left = parseInt(ea.style.left.slice(0, ea.style.left.length - 2))
+                                + parseInt(ea.style.marginLeft.slice(0, ea.style.marginLeft.length - 2)) + "px";
+                        }
+
+                        // delete old one
+                        if (e !== null) { e.remove(); }
+                        continue;
+                    }
+                }
+            } else {
+                // add obstacles
+                for(let i=0; i<10; i++) { addObstacle(w); }
+            }
+        }
+        function addObstacle(w, d = false) {
+            let diff = Math.floor(Math.random() * 25) + 175;
+            let toph = Math.floor(Math.random() * 200) + 50;
+            let both = window.innerHeight - toph - diff;
+            console.log(window.innerWidth)
+            //let space = Math.floor(Math.random() * window.innerWidth/15) + window.innerWidth/20;
+
+            w.innerHTML += `<div id="obstaclegroup-${count+1}" style="margin-left: ${0}px; left: ${left}px">
+                <div class="obstacle" style="top: 0px; height: ${toph}px"></div>
+                <div class="obstacle" style="top: ${toph+diff}px; height: ${both}px"></div>
+            </div>`;
+            count++;
+        }
+        window.onkeyup = (e) => {
+            if (e.key === ' ' || e.key === 'Spacebar') {
+                // ' ' is standard, 'Spacebar' was used by IE9 and Firefox < 37
+                e.preventDefault();
+                if (birdpos < (-window.innerHeight+300)/2) return;
+                birdpos -= 75;
+                let bpn = birdpos;
+                if (birdpos > -1) { bpn = "+ "+birdpos; }
+                if (birdpos < 0) { bpn = "- "+birdpos.toString().slice(1, birdpos.toString().length); }
+                document.getElementById('bird').style.top = "calc(50vh "+bpn+"px)";
+            }
+        };
+        function gravity() {
+            birdpos+=5;
+            let bpn = birdpos;
+            if (birdpos > -1) { bpn = "+ "+birdpos; }
+            if (birdpos < 0) { bpn = "- "+birdpos.toString().slice(1, birdpos.toString().length); }
+            document.getElementById('bird').style.top = "calc(50vh "+bpn+"px)";
+            if (birdpos > window.innerHeight/2) {
+                birdpos = -50;
+                //death();
+            }
+        }
+        function death() {
+            document.getElementById('game').innerHTML = '<p style="font-size: 24px; margin-top: 20px;">You died! <a style="cursor:pointer;color:skyblue;" onclick="window.location.reload()">Try again</a>';
+        }
+        setInterval(()=>{gravity(); obstacles();}, 25);
+    </script>
+    <style>
+    body {
+        background-color: #0e0e0e;
+        color: #f8f8f8;
+        font-family: Inter, sans-serif;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; overflow: hidden; }
+    #bird {
+        position: fixed;
+        top: calc(50vh - 50px);
+        left: calc(50vw - 50px);
+        transition: top 0.075s;
+    }
+    .obstacles { position: relative; display: flex; width: 100vw; height: calc(100vh - 150px); }
+    .obstacles div { position: relative; height: 100%; }
+    .obstacles div .obstacle { position: relative; z-index: 1; background-color: #009900; min-width: 150px; width: 150px; }
+    </style>
+</body>
+</html>

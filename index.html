@@ -7,124 +7,169 @@
         <link type="text/css" rel="stylesheet" href="./assets/main.css">
 		<script src="https://kit.fontawesome.com/d5db5a9cd6.js" crossorigin="anonymous"></script>
 	</head>
-
 	<body>
-        <div class="content">
-            <div id="top" class="section-wrapper intro-wrapper"><div class="section intro">
-                <h1 class="title">foxlldev</h1>
-                <p class="desc">developer and graphic designer from the uk</p><br>
-                <p class="desc2">i am rather good at problem solving, and am experienced in many programming languages.</p>
-                <br><a href="#skills">view skills</a>
-            </div></div>
-    
-            <div id="skills" class="section-wrapper skills-wrapper"><div class="section skills">
-                <h1 class="title">skills</h1>
-				<p class="desc">i learn coding skills quite quickly, so if you need me to learn a skill not listed here or improve on an existing skill, don't worry.</p><br>
-                <div style="margin-top: 10px; margin-bottom: 10px;" class="skills">
-                    <div class="skill">
-                        <div class="progress" style="width: 100%; right: 0;"></div>
-                        <div class="text"><span class="name"><i class="fa-solid fa-palette im"></i> FRONTEND - DESIGN</span><span class="amount">100%</span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="progress" style="width: 100%; right: 0;"></div>
-                        <div class="text"><span class="name"><i class="fa-solid fa-pen-nib im"></i> FRONTEND - APPLICATION</span><span class="amount">100%</span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="progress" style="width: 96%; right: 4%;"></div>
-                        <div class="text"><span class="name"><i class="fa-solid fa-e" style="margin-right: 5px;"></i> ELECTRON.JS</span><span class="amount">96%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 92%; right: 8%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-square-js"></i> JAVASCRIPT</span><span class="amount">92%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 74%; right: 26%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-java m"></i> JAVA</span><span class="amount">74%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 48%; right: 52%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-node-js"></i> NODEJS</span><span class="amount">48%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 36%; right: 64%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-square-js"></i> TYPESCRIPT</span><span class="amount">36%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 35%; right: 65%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-unity m"></i> UNITY</span><span class="amount">35%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 29%; right: 71%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-discord" style="margin-right: 5px;"></i>DISCORD.JS</span><span class="amount">29%</span></div>
-                    </div>
-                    <div class="skill">
-                        <div class="progress" style="width: 27%; right: 73%;"></div>
-                        <div class="text"><span class="name"><i class="fa-solid fa-server"></i> BACKEND & API</span><span class="amount">27%</span></div>
-                    </div>
-					<div class="skill">
-                        <div class="progress" style="width: 24%; right: 76%;"></div>
-                        <div class="text"><span class="name"><i class="fa-brands fa-react"></i> REACT.JS</span><span class="amount">24%</span></div>
+        <div class="header">
+            <div class="bg"></div>
+            <img src='./assets/pfp.png'>
+            <p>foxlldev's portfolio</p>
+        </div>
+		<div class="content">
+			<div class="slideshow absolute">
+                <input class="selector" type="radio" id="slidesel-projects-0" name="project-slides" checked autofocus>
+                <label for="slidesel-projects-0"></label>
+                <div class="slide" id="slide-projects-0" style="background-image: url('./assets/projects/withered.png')">
+                    <div class="bg"></div>
+                    <div class="content">
+                        <div class="logo"><img src='./assets/withered.png'><span>Withered Group</span></div>
+                        <p>Software to get the ball rolling</p>
+                        <div class="buttons">
+                            <a class="button primary" href="https://withered.group">Explore</a>
+                            <a class="button opaque" href="https://github.com/sponsors/withered-group">Sponsor</a>
+                        </div>
                     </div>
                 </div>
-				<br><a href="#projects">view projects</a>
-            </div></div>
-
-            <div id="projects" class="section-wrapper projects-wrapper"><div class="section projects">
-                <h1 class="title">projects</h1>
-                <div class="projects">
-					<div class="project">
-						<img src="./assets/withered.png">
-						<label>Withered Launcher</label>
-						<span>(launcher app)</span><br>
-						<a class="button" href="https://withered.app">CHECK IT OUT</a>
-					</div>
-					<div class="project">
-						<img src="https://blueskye.dev/img/kynosocial.png">
-						<label>Kynosocial</label>
-						<span>(minimalist social media)</span><br>
-						<a class="button" href="https://kyno.social">EMBRACE INNER MINIMALIST</a>
-					</div>
-					<div class="project">
-						<img src="./mind/assets/media/logo.png">
-						<label>Foxlmind</label>
-						<span>(note-keeping app)</span><br>
-						<a class="button" href="/mind">STOP FORGETTING</a>
-					</div>
-					<div class="project">
-						<img src="./assets/foxlmp.png">
-						<label>Foxlmp</label>
-						<span>(local music player)</span><br>
-						<a class="button" href="/musicplayer">START LISTENING</a>
-					</div>
-				</div>
-				<br><a href="#contact">view contact details</a>
-            </div></div>
-
-			<div id="contact" class="section-wrapper contact-wrapper"><div class="section contact">
-                <h1 class="title">contact</h1>
-				<div class="contacts">
-					<a class="method" href="mailto:foxl@withered.app"><div><i class="fa-solid fa-envelope"></i></div><span>foxl@withered.app</span></a>
-					<a class="method" href="https://github.com/foxlldev"><div><i class="fa-brands fa-github"></i></div><span>foxlldev</span></a>
-					<a class="method" href="https://discord.com/users/400680342136291329"><div><i class="fa-brands fa-discord"></i></div><span>foxl#3260</span></a>
-				</div>
-                <br><a href="#top">back to top</a>
-            </div></div>
-        </div>
-
-		<!-- Import maps polyfill -->
-		<!-- Remove this when import maps will be widely supported -->
-		<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
-
-		<script type="importmap">
-			{
-				"imports": {
-					"three": "./node_modules/three/build/three.module.js",
-					"three/addons/": "./jsm/"
-				}
-			}
-		</script>
-
-		<script type="module" src="./assets/main.js"></script>
-
+                <input class="selector" type="radio" id="slidesel-projects-1" name="project-slides">
+                <label for="slidesel-projects-1"></label>
+                <div class="slide" id="slide-projects-1" style="background-image: url('./assets/projects/foxlmind.png')">
+                    <div class="bg"></div>
+                    <div class="content">
+                        <div class="logo"><img src='./assets/foxlmind.svg'><span>Foxlmind</span></div>
+                        <p>Note-keeping you won't forget</p>
+                        <div class="buttons">
+                            <a class="button primary" href="/mind/">Take a look</a>
+                        </div>
+                    </div>
+                </div>
+                <input class="selector" type="radio" id="slidesel-projects-2" name="project-slides">
+                <label for="slidesel-projects-2"></label>
+                <div class="slide" id="slide-projects-2" style="background-image: url('./assets/projects/flipped.png')">
+                    <div class="bg"></div>
+                    <div class="content">
+                        <div class="logo"><img src='./assets/flipped.svg'><span>Flipped Client</span></div>
+                        <p>Simple, lightweight and built for the future</p>
+                        <p class="cs">Coming soon...</p>
+                    </div>
+                </div>
+                <script>
+                setInterval(() => {
+                    let p = 0;
+                    for (let i=0; i<3; i++) {
+                        let e = document.getElementById('slidesel-projects-'+i);
+                        if (e.checked) {
+                            p = i;
+                        }
+                    }
+                    if (p === 2) { p = -1; }
+                    document.getElementById('slidesel-projects-'+(p+1)).click();
+                }, 8000);
+                </script>
+            </div>
+            <div class='after'>
+                <p class="section">I design and develop products that I believe uniquely innovate their field.
+                    From game launcher backends to user portal designs, I have a wide skillset that's useful in many areas.
+                </p>
+                <p>...</p>
+                <div class="section">
+                    <p class="title">Skills</p>
+                    <div class="skills">
+                        <div class="item">
+                            <div class='img' style="background-color: #001E2B">
+                                <img src="./assets/skills/mongodb.svg">
+                            </div>
+                            <div>
+                                <p class="name">MongoDB</p>
+                                <p>(Intermediate)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #f8f8f8">
+                                <img src="./assets/skills/java.svg">
+                            </div>
+                            <div>
+                                <p class="name">Java/C#</p>
+                                <p>(Intermediate)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #f8f8f8">
+                                <img src="./assets/skills/html.svg">
+                            </div>
+                            <div>
+                                <p class="name">HTML/CSS</p>
+                                <p>(Experienced)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #f7df1e">
+                                <img src="./assets/skills/javascript.png">
+                            </div>
+                            <div>
+                                <p class="name">JavaScript</p>
+                                <p>(Experienced)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #2F3242">
+                                <img src="./assets/skills/electron.svg">
+                            </div>
+                            <div>
+                                <p class="name">ElectronJS</p>
+                                <p>(Experienced)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #3178C6">
+                                <img src="./assets/skills/typescript.png">
+                            </div>
+                            <div>
+                                <p class="name">TypeScript</p>
+                                <p>(Intermediate)</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class='img' style="background-color: #20232a">
+                                <img src="./assets/skills/react.png">
+                            </div>
+                            <div>
+                                <p class="name">ReactJS</p>
+                                <p>(Intermediate)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>...</p>
+                <div class="section aboutme">
+                    <p class="title">About me</p>
+                    <p>I'm a hobbyist developer and graphic designer from the UK.
+                        <br>I am a perfectionist that will strive to achieve the very best in any and every project I am involved in.
+                        <br>Although still learning and improving, I can provide you or your business with professional service and support.
+                    </p>
+                </div>
+                <p>...</p>
+                <div class="section contact">
+                    <p class="title">Contact</p>
+                    <div>
+                        <a class="item" href="mailto:foxl@withered.group">
+                            <div>
+                                <img src="./assets/contact/email.svg">
+                            </div>
+                            foxl@withered.group
+                        </a>
+                        <a class="item" href="https://github.com/foxlldev">
+                            <div>
+                                <img src="./assets/contact/github.svg">
+                            </div>
+                            foxlldev
+                        </a>
+                        <a class="item" href="https://discord.com/users/400680342136291329">
+                            <div>
+                                <img src="./assets/contact/discord.svg">
+                            </div>
+                            foxl#3260
+                        </a>
+                    </div>
+                </div>
+            </div>
+		</div>
 	</body>
 </html>
