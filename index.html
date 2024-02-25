@@ -1,9 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>test foxl haha</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALLEN Design & Development</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-  <h1>hullo</h1>
-  <h2>haha test. go to <a href="https://foxl.design">foxl.design</a> to view my portfolio</h2>
+    <header class="header">
+        <div></div>
+        <p class="logo">ALLEN</p>
+        <nav>
+            <a href="./contact.html"><img src="./assets/icons/mail.svg" alt="Contact" height="18"></a>
+        </nav>
+    </header>
+    <div class="content">
+        <div class="intro">
+            <img src="./assets/media/undraw_design_notes_re_eklr.svg" alt="Intro image">
+            <div class="text">
+                <div>
+                    <h1>Idea, design, development</h1>
+                    <p>
+                        ALLEN is a web/software design and development company based in the UK.
+                        <br>We provide design consultation, web/software/app development and more.
+                    </p>
+                </div>
+                <div class="buttons">
+                    <a class="button primary full" href="./contact.html">CONTACT US</a>
+                    <!--<a class="button" href="./about.html">ABOUT US</a>-->
+                </div>
+            </div>
+        </div>
+        <div class="projects">
+            <a class="project" href="./projects.html?id=schezule">
+                <div class="image">
+                    <img src="./assets/projects/schezule/icon.svg" height="192">
+                </div>
+                <p class="title">Schezule</p>
+                <p><span class="state development">DEVELOPMENT</span> Scheduling mobile app. (React Native)</p>
+            </a>
+            <a class="project" href="./projects.html?id=bitternightfall">
+                <div class="image">
+                    <img src="./assets/projects/bitternightfall/icon.svg" width="192">
+                </div>
+                <p class="title">Bitter Nightfall</p>
+                <p><span class="state development">DEVELOPMENT</span> Survival/exploration game.<br>(Unreal Engine)</p>
+            </a>
+            <a class="project" href="./projects.html?id=witheredlauncher">
+                <div class="image">
+                    <img src="./assets/projects/witheredlauncher/icon.svg" height="192">
+                </div>
+                <p class="title">Withered Launcher</p>
+                <p><span class="state discontinued">DISCONTINUED</span> Games and software distribution platform. (React, Tauri)</p>
+            </a>
+            <a class="project" href="./projects.html?id=mindnote">
+                <div class="image">
+                    <img src="./assets/projects/mindnote/icon.svg" width="192">
+                </div>
+                <p class="title">Mindnote</p>
+                <p><span class="state deprecated">DEPRECATED</span> Note keeping & to-do app. (Electron)</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
