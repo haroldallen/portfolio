@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import Photography from "./pages/Photography";
 import PhotographyAlbum from "./pages/PhotographyAlbum";
+import Error404 from "./pages/Error404";
 
 createRoot(document.getElementById('root')).render(<App />)
 
@@ -30,6 +31,8 @@ function App() {
 
                     <Route path="/photography/" element={<Photography />} />
                     <Route path="/photography/:date" element={<PhotographyAlbum />} />
+
+                    <Route path="/*" element={<Error404 />} />
                 </Routes>
                 <Footer />
             </BrowserRouter>
