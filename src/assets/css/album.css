@@ -1,0 +1,10 @@
+.album .jsb {
+    margin-bottom: 48px;
+}
+
+.album .heading {
+    margin-bottom: 0;
+}
+.album .jsb div:last-child {
+    text-align: right;
+}

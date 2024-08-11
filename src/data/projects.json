@@ -1,0 +1,38 @@
+[
+    {
+        "type": "software",
+        "id": "mindnote",
+        "name": "Mindnote",
+        "description": "Note keeping & to-do app.\nDeprecated.",
+        "link": null,
+        "screenshots": 4,
+        "icon": "icon.svg"
+    },
+    {
+        "type": "game",
+        "id": "bitternightfall",
+        "name": "Bitter Nightfall",
+        "description": "An upcoming survival/exploration game made in Unreal Engine 5.\nInspired by The Long Dark, Firewatch, and Subnautica.",
+        "link": null,
+        "screenshots": 4,
+        "icon": "icon.svg"
+    },
+    {
+        "type": "software",
+        "id": "airrec",
+        "name": "Airrec",
+        "description": "Air recognition revision tool, built with React for use in the RAF Air Cadets.\nGives multiple choice and writing questions with rich customization.",
+        "link": "https://www.hallen.uk/airrec",
+        "screenshots": 4,
+        "icon": "icon.svg"
+    },
+    {
+        "type": "software",
+        "id": "andromeda",
+        "name": "Andromeda.run",
+        "description": "Andromeda will be the distribution solution of your dreams: a sleek, modern games and software distribution platform and developer suite, similar to Steam.",
+        "link": "https://www.andromeda.run",
+        "screenshots": 4,
+        "icon": "icon.svg"
+    }
+]

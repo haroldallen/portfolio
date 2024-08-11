@@ -1,73 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harry Allen's Portfolio</title>
-    <link rel="stylesheet" href="./assets/styles.css">
-</head>
-<body>
-    <header class="header">
-        <div></div>
-        <p class="logo">ALLEN</p>
-        <nav>
-            <a href="./contact.html"><img src="./assets/icons/mail.svg" alt="Contact" height="18"></a>
-        </nav>
-    </header>
-    <div class="content">
-        <div class="intro">
-            <img src="./assets/media/undraw_design_notes_re_eklr.svg" alt="Intro image">
-            <div class="text">
-                <div>
-                    <h1>Hi! I'm Harry :)</h1>
-                    <p>
-                        I do web/software design & development, photography and airrec sometimes.
-                        <br />If you've got an idea for something, hit me up.
-                    </p>
-                </div>
-                <div class="buttons">
-                    <a class="button primary full" href="./contact.html">CONTACT ME</a>
-                    <!--<a class="button" href="./about.html">ABOUT US</a>-->
-                </div>
-            </div>
-        </div>
-        <div class="projects">
-            <a class="project" href="./projects.html?id=airrec">
-                <div class="image">
-                    <img src="./assets/projects/airrec/icon.svg" width="192">
-                </div>
-                <p class="title">Airrec</p>
-                <p><span class="state active">ACTIVE</span> Air recognition revision tool.<br>(React)</p>
-            </a>
-            <a class="project" href="/photography">
-                <div class="image">
-                    <img src="./assets/projects/photography.svg" width="192">
-                </div>
-                <p class="title">Photography</p>
-                <p><span class="state active">ACTIVE</span> See some of my photography.<br>(Canon EOS 2000D)</p>
-            </a>
-            <!--<a class="project" href="./projects.html?id=bitternightfall">
-                <div class="image">
-                    <img src="./assets/projects/bitternightfall/icon.svg" width="192">
-                </div>
-                <p class="title">Bitter Nightfall</p>
-                <p><span class="state development">DEVELOPMENT</span> Survival/exploration game.<br>(Unreal Engine)</p>
-            </a>-->
-            <a class="project" href="./projects.html?id=witheredlauncher">
-                <div class="image">
-                    <img src="./assets/projects/witheredlauncher/icon.svg" height="192">
-                </div>
-                <p class="title">Withered Launcher</p>
-                <p><span class="state discontinued">DISCONTINUED</span> Games and software distribution platform. (React, Tauri)</p>
-            </a>
-            <a class="project" href="./projects.html?id=mindnote">
-                <div class="image">
-                    <img src="./assets/projects/mindnote/icon.svg" width="192">
-                </div>
-                <p class="title">Mindnote</p>
-                <p><span class="state deprecated">DEPRECATED</span> Note keeping & to-do app. (Electron)</p>
-            </a>
-        </div>
-    </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harold Allen</title>
+  </head>
+  <body class="theme-light">
+    <div id="root"></div>
+    <style>
+      html, body, #root, .page {
+        background-color: #f8f8f8;
+      }
+    </style>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

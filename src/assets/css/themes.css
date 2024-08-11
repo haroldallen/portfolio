@@ -1,0 +1,10 @@
+.theme-light {
+    --background: #f8f8f8;
+    --color: #181818;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+:root {
+    --font-family: Inter, Helvetica, Arial, sans-serif;
+    --font-size: 18px;
+    --font-weight: 300;
+}
