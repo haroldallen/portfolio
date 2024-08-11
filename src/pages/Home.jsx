@@ -20,7 +20,7 @@ export default function Home() {
 
     async function load() {
         let newPhotos = [...photography];
-        setPhotosInOrder(newPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)));
+        setPhotosInOrder(newPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 4));
 
         let newProjects = [...projects];
         setProjectsInOrder(newProjects.reverse());

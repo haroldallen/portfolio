@@ -104,6 +104,14 @@ svg, .half {
 .list:not(.wrap) > *:nth-child(4) {
     opacity: 0.5;
 }
+@media only screen and (max-width: 1650px) {
+    .list.projects {
+        grid-auto-flow: initial;
+    }
+    .page {
+        padding: 0 24px 24px 24px;
+    }
+}
 
 .list.photography .photo {
     height: 512px;
@@ -142,7 +150,9 @@ svg, .half {
     gap: 48px;
 }
 .list.projects > * {
-    width: 488px;
+    max-width: 488px;
+    width: calc(100vw - 96px);
+    height: 100%;
     display: flex;
     gap: 16px;
 }
@@ -162,5 +172,10 @@ svg, .half {
 }
 .list.projects .description {
     white-space: pre-wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
 }
 /*#endregion */
