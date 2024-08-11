@@ -23,6 +23,7 @@ export default function PhotographyAlbum() {
         if (!date) return navigate("/photography");
 
         let newAlbum = [...photography].filter(data => data.date == date)[0];
+        if (!newAlbum) return navigate("/photography");
         setAlbum(newAlbum);
 
         setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
