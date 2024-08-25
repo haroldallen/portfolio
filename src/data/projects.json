@@ -22,7 +22,7 @@
         "id": "airrec",
         "name": "Airrec",
         "description": "Air recognition revision tool, built with React for use in the RAF Air Cadets.\nGives multiple choice and writing questions with rich customization.",
-        "link": "https://www.hallen.uk/airrec",
+        "link": "https://airrec.hallen.uk/",
         "screenshots": 4,
         "icon": "icon.svg"
     },
