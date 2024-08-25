@@ -30,7 +30,8 @@ export default function Project() {
         <button className="notbutton link" onClick={()=>{ navigate("/") }}>
             <ArrowLeftIcon height={14} /> Back
         </button>
-        <p className="heading">{project.name}</p>
+        <p className="heading subtitle">{project.name}</p>
+        <p className="heading" style={{marginTop: 0}}>Screenshots</p>
         <div className="list screenshots">
             {photos && photos.length > 0
                 ? photos.map((_, index) => <Screenshot key={index} id={id} index={index} /> )

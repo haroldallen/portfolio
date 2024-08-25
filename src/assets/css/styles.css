@@ -94,7 +94,7 @@ svg, .half {
 .list.wrap {
     grid-auto-flow: initial;
     grid-template-columns: repeat(auto-fill, minmax(512px, 1fr));
-    max-width: calc(100vw - 96px);
+    max-width: calc(100vw - 24px - 24px);
     width: 100%;
 }
 .list > * {
@@ -105,8 +105,11 @@ svg, .half {
     opacity: 0.5;
 }
 @media only screen and (max-width: 1650px) {
-    .list.projects {
+    .list.projects, .list.screenshots {
         grid-auto-flow: initial;
+    }
+    .list:not(.wrap) > *:nth-child(4) {
+        opacity: 1;
     }
     .page {
         padding: 0 24px 24px 24px;
@@ -141,8 +144,12 @@ svg, .half {
     text-shadow: 0 0 10px var(--shadow);
     color: #fff;
 }
-.list.photography.album .photo {
+.list.photography.wrap .photo {
+    max-width: calc(100vw - 24px - 24px);
     width: 512px;
+    height: 512px;
+}
+.list.photography.album .photo {
     height: auto;
 }
 
