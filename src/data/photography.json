@@ -133,5 +133,14 @@
         "length": 7,
         "camera": "Canon EOS 2000D",
         "lens": "Sigma 18-50mm f/2.8"
+    },
+    {
+        "type": "landscape",
+        "title": "Aston Martin & Ferrari Car Show",
+        "thumbnail": "3.jpg",
+        "date": 1723248000000,
+        "length": 16,
+        "camera": "Canon EOS 2000D",
+        "lens": "Sigma 18-50mm f/2.8"
     }
 ]
