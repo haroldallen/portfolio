@@ -1,6 +1,7 @@
 import "../assets/css/album.css";
 
 import photography from "../data/photography.json";
+import categories from "../data/photographyCategories.json";
 
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -23,10 +24,30 @@ export default function PhotographyAlbum() {
         if (!date) return navigate("/photography");
 
         let newAlbum = [...photography].filter(data => data.date == date)[0];
-        if (!newAlbum) return navigate("/photography");
+        if (!newAlbum) {
+            let category = categories.find(data => data.id == date);
+            if (category) newAlbum = { ...category, title: category.name, type: "category" };
+            else return navigate("/photography");
+        } else newAlbum = { ...newAlbum, type: "album" };
         setAlbum(newAlbum);
 
-        setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
+        if (newAlbum.type === "category") {
+            let newPhotos = [];
+            for (const [ date, entries ] of Object.entries(newAlbum.list)) {
+                console.log(date, entries)
+                // entries is the list ([0, 1, 2, 3]), date is the timestamp key
+                let albumPhotos = [];
+                for (let i=0; i<photography.find(data => data.date == date).length; i++) {
+                    console.log(date, i)
+                    if (entries.includes(i)) albumPhotos.push(`${date}/${i}.jpg`);
+                }
+                albumPhotos.reverse();
+                newPhotos.push(...albumPhotos);
+            }
+            newPhotos.reverse();
+            setPhotos(newPhotos);
+        }
+        else setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
     }
 
     return <div className="page album">
@@ -36,7 +57,10 @@ export default function PhotographyAlbum() {
         <div className="jsb">
             <div>
                 <p className="heading subtitle">{album.title}</p>
-                <p className="date">{moment(album.date).format("dddd, Do MMMM YYYY")}</p>
+                <p className="date">
+                    { album.type === "album" ? moment(album.date).format("dddd, Do MMMM YYYY")
+                    : photos.length+" photos" }
+                </p>
             </div>
             { album.camera && album.lens ? <div>
                 <p><span className="half">Camera: </span>{album.camera}</p>
@@ -44,9 +68,15 @@ export default function PhotographyAlbum() {
             </div> : <></> }
         </div>
         <div className="list wrap photography album">
-            {photos && photos.length > 0
-                ? photos.map((_, index) => <Photo key={index} label="none" date={date} thumbnail={index+".jpg"} /> )
-                : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
+            { album.type === "album" ? <>
+                { photos && photos.length > 0
+                    ? photos.map((_, index) => <Photo key={index} label="none" date={date} thumbnail={index+".jpg"} /> )
+                    : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
+            </> : <>
+                { photos && photos.length > 0
+                    ? photos.map((data, index) => <Photo key={index} label="none" date={data.split("/")[0]} thumbnail={data.split("/")[1]} /> )
+                    : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
+            </> }
         </div>
     </div>;
 }

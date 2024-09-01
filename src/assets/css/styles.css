@@ -77,7 +77,7 @@ svg, .half {
     overflow-x: hidden;
     min-height: calc(100vh - 116px - 37px);
 }
-.footer {
+.footer     {
     display: flex;
     padding: 8px 48px;
     background-color: var(--shadow);
@@ -105,7 +105,7 @@ svg, .half {
     opacity: 0.5;
 }
 @media only screen and (max-width: 1650px) {
-    .list.projects, .list.screenshots {
+    .list.projects, .list.screenshots, .list.categories {
         grid-auto-flow: initial;
     }
     .list:not(.wrap) > *:nth-child(4) {
@@ -153,10 +153,11 @@ svg, .half {
     height: auto;
 }
 
-.list.projects {
+.list.projects, .list.categories {
     gap: 48px;
 }
-.list.projects > * {
+.list.projects > *,
+.list.categories > * {
     max-width: 488px;
     width: calc(100vw - 96px);
     height: 100%;
@@ -170,7 +171,8 @@ svg, .half {
     width: 128px;
     height: 128px;
 }
-.list.projects div {
+.list.projects div,
+.list.categories div {
     display: flex;
     flex-direction: column;
     height: 128px;
@@ -185,4 +187,14 @@ svg, .half {
     -webkit-box-orient: vertical;
     overflow-y: hidden;
 }
+
+.list.categories img {
+    object-fit: cover;
+    width: 96px;
+    height: 96px;
+}
+.list.categories div {
+    height: 96px;
+}
 /*#endregion */
+    

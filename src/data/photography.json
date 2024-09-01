@@ -88,13 +88,13 @@
         "length": 3,
         "camera": "Canon EOS 2000D",
         "lens": "Sigma 18-50mm f/2.8"
-    },
+    },      
     {
         "type": "landscape",
         "title": "BeamNG Photography #2",
         "thumbnail": "0.jpg",
         "date": 1719097200000,
-        "length": 5,
+        "length": 5,        
         "camera": null,
         "lens": null
     },
@@ -123,7 +123,7 @@
         "date": 1721952000000,
         "length": 6,
         "camera": "Canon EOS 2000D",
-        "lens": "Sigma 18-50mm f/2.8"
+        "lens": "Sigma 18-50mm f/2.8"   
     },
     {
         "type": "portrait",
@@ -140,7 +140,7 @@
         "thumbnail": "3.jpg",
         "date": 1723248000000,
         "length": 16,
-        "camera": "Canon EOS 2000D",
+        "camera": "Canon EOS 2000D",    
         "lens": "Sigma 18-50mm f/2.8"
     }
 ]
