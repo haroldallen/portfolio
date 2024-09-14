@@ -28,6 +28,15 @@
     },
     {
         "type": "software",
+        "id": "metariser",
+        "name": "Metariser",
+        "description": "Metariser generates images from your photos with borders and metadata, ready for sharing on socials.\nBuilt in Python with Pillow.",
+        "link": "https://github.com/haroldallen/metariser",
+        "screenshots": 4,
+        "icon": "icon.svg"
+    },
+    {
+        "type": "software",
         "id": "andromeda",
         "name": "Andromeda.run",
         "description": "Andromeda will be the distribution solution of your dreams: a sleek, modern games and software distribution platform and developer suite, similar to Steam.",
