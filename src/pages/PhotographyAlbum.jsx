@@ -17,6 +17,7 @@ export default function PhotographyAlbum() {
 
     const [ album, setAlbum ] = useState({});
     const [ photos, setPhotos ] = useState([]);
+    const [ lens, setLens ] = useState("");
 
     useEffect(()=>{ load() }, []);
 
@@ -47,7 +48,11 @@ export default function PhotographyAlbum() {
             newPhotos.reverse();
             setPhotos(newPhotos);
         }
-        else setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
+        else {
+            setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
+            if (Array.isArray(newAlbum.lens)) setLens(newAlbum.lens.join(", "));
+            else setLens(newAlbum.lens);
+        }
     }
 
     return <div className="page album">
@@ -61,10 +66,11 @@ export default function PhotographyAlbum() {
                     { album.type === "album" ? moment(album.date).format("dddd, Do MMMM YYYY")
                     : photos.length+" photos" }
                 </p>
+               { album.reedits ? <p className="reedits">This album contains re-edits</p> : <></> }
             </div>
             { album.camera && album.lens ? <div>
                 <p><span className="half">Camera: </span>{album.camera}</p>
-                <p><span className="half">Lens: </span>{album.lens}</p>
+                <p><span className="half">Lens: </span>{lens}</p>
             </div> : <></> }
         </div>
         <div className="list wrap photography album">

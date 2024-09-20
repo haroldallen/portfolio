@@ -8,4 +8,8 @@
 .album .jsb div:nth-child(2) {
     text-align: right;
 }
-
+.album .reedits {
+    margin-top: 4px;
+    opacity: 0.5;
+    color: purple;
+}
