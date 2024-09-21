@@ -155,5 +155,17 @@
             "Sigma 18-50mm f/2.8"
         ],
         "reedits": true
+    },
+    {
+        "type": "portrait",
+        "title": "Mirada at the Junction",
+        "thumbnail": "9.jpg",
+        "date": 1726849800000,
+        "length": 20,
+        "camera": "Canon EOS 2000D",
+        "lens": [
+            "Canon 55-250mm f/4-5.6",
+            "Sigma 18-50mm f/2.8"
+        ]
     }
 ]
