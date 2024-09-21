@@ -1,3 +1,14 @@
+/*.album-wrapper {
+    max-width: calc(100vw - 96px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.album-wrapper .album {
+    max-width: 1824px !important;
+    width: 100% !important;
+}*/
+
 .album .jsb {
     margin-bottom: 48px;
 }

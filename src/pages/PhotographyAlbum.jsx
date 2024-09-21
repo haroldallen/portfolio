@@ -18,42 +18,74 @@ export default function PhotographyAlbum() {
     const [ album, setAlbum ] = useState({});
     const [ photos, setPhotos ] = useState([]);
     const [ lens, setLens ] = useState("");
+    const [ columns, setColumns ] = useState([]);
 
-    useEffect(()=>{ load() }, []);
+    useEffect(()=>{
+        let newPhotos = load();
+        loadColumns(newPhotos);
+        window.onresize = () => {
+            loadColumns(newPhotos);
+        }
+    }, []);
 
-    async function load() {
-        if (!date) return navigate("/photography");
+    function loadColumns(localPhotos=[]) {
+        let columnAmount = Math.max(Math.floor((window.innerWidth - 96 - 16 - 16) / 512), 1);
+        let localColumns = [];
+        
+        for (let i=0; i<columnAmount; i++) localColumns.push([]);
+
+        let i = 0;
+        console.log(localPhotos)
+        for (const photo of localPhotos) {
+            let column = i % columnAmount;
+
+            localColumns[column] = localColumns[column]
+                ? localColumns[column].concat([photo]) : [photo];
+
+            i++;
+        }
+
+        setColumns(localColumns);
+        console.log(localColumns)
+        return localColumns;
+    }
+
+    function load() {
+        if (!date) { navigate("/photography"); return []; }
 
         let newAlbum = [...photography].filter(data => data.date == date)[0];
         if (!newAlbum) {
             let category = categories.find(data => data.id == date);
             if (category) newAlbum = { ...category, title: category.name, type: "category" };
-            else return navigate("/photography");
+            else { navigate("/photography"); return []; }
         } else newAlbum = { ...newAlbum, type: "album" };
         setAlbum(newAlbum);
 
+        let newPhotos = [];
         if (newAlbum.type === "category") {
-            let newPhotos = [];
             for (const [ date, entries ] of Object.entries(newAlbum.list)) {
                 console.log(date, entries)
                 // entries is the list ([0, 1, 2, 3]), date is the timestamp key
                 let albumPhotos = [];
                 for (let i=0; i<photography.find(data => data.date == date).length; i++) {
-                    console.log(date, i)
                     if (entries.includes(i)) albumPhotos.push(`${date}/${i}.jpg`);
                 }
                 albumPhotos.reverse();
                 newPhotos.push(...albumPhotos);
             }
             newPhotos.reverse();
-            setPhotos(newPhotos);
         }
         else {
-            setPhotos(Array.from({ length: newAlbum.length }, (_, index) => index));
+            newPhotos = Array.from({ length: newAlbum.length }, (_, index) => index);
             if (Array.isArray(newAlbum.lens)) setLens(newAlbum.lens.join(", "));
             else setLens(newAlbum.lens);
         }
+
+        setPhotos(newPhotos);
+        return newPhotos;
     }
+
+
 
     return <div className="page album">
         <button className="notbutton link" onClick={()=>{ navigate("/photography") }}>
@@ -73,16 +105,24 @@ export default function PhotographyAlbum() {
                 <p><span className="half">Lens: </span>{lens}</p>
             </div> : <></> }
         </div>
-        <div className="list wrap photography album">
-            { album.type === "album" ? <>
-                { photos && photos.length > 0
-                    ? photos.map((_, index) => <Photo key={index} label="none" date={date} thumbnail={index+".jpg"} /> )
-                    : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
-            </> : <>
-                { photos && photos.length > 0
-                    ? photos.map((data, index) => <Photo key={index} label="none" date={data.split("/")[0]} thumbnail={data.split("/")[1]} /> )
-                    : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
-            </> }
+        <div className="album-wrapper">
+            <div className="list wrap photography album">
+                { columns.map((column, cIndex) => <div className="column">
+                    { album.type === "album" ?
+                        column.map((id, index) => <Photo key={index} id={cIndex+"/"+index} label="none" date={date} thumbnail={id+".jpg"} /> )
+                        : column.map((data, index) => <Photo key={index} id={cIndex+"/"+index} label="none" date={data.split("/")[0]} thumbnail={data.split("/")[1]} /> ) }
+                </div>) }
+
+                { /*album.type === "album" ? <>
+                    { photos && photos.length > 0
+                        ? photos.map((_, index) => <Photo key={index} label="none" date={date} thumbnail={index+".jpg"} /> )
+                        : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
+                </> : <>
+                    { photos && photos.length > 0
+                        ? photos.map((data, index) => <Photo key={index} label="none" date={data.split("/")[0]} thumbnail={data.split("/")[1]} /> )
+                        : Array.from({ length: 6 }).map((_, index) => <Photo key={index} /> )}
+                </>*/ }
+            </div>
         </div>
     </div>;
 }
