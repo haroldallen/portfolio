@@ -9,6 +9,12 @@
     width: 100% !important;
 }*/
 
+.photography.album .column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 .album .jsb {
     margin-bottom: 48px;
 }
