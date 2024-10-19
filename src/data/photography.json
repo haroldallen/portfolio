@@ -96,7 +96,8 @@
         "date": 1719097200000,
         "length": 5,        
         "camera": null,
-        "lens": null
+        "lens": null,
+        "real": false
     },
     {
         "type": "landscape",
@@ -176,5 +177,17 @@
         "length": 8,
         "camera": "Canon EOS 2000D",
         "lens": "Sigma 18-50mm f/2.8"
+    },
+    {
+        "type": "portrait",
+        "title": "f/1.8 Street photography",
+        "thumbnail": "0.jpg",
+        "date": 1728777600000,
+        "length": 13,
+        "camera": "Canon EOS 2000D",
+        "lens": [
+            "Canon 50mm f/1.8",
+            "Sigma 18-50mm f/2.8"
+        ]
     }
 ]
