@@ -189,5 +189,17 @@
             "Canon 50mm f/1.8",
             "Sigma 18-50mm f/2.8"
         ]
+    },
+    {
+        "type": "portrait",
+        "title": "Mirada at the Portland Arms",
+        "thumbnail": "0.jpg",
+        "date": 1730505600000,
+        "length": 21,
+        "camera": "Canon EOS 2000D",
+        "lens": [
+            "Canon 50mm f/1.8",
+            "Sigma 18-50mm f/2.8"
+        ]
     }
 ]
