@@ -13,7 +13,7 @@ export default function Photography() {
 
     async function load() {
         let newPhotos = [...photography];
-        setPhotosInOrder(newPhotos.sort((a, b) => new Date(b.date) - new Date(a.date)));
+        setPhotosInOrder(newPhotos.filter(data => data.visible!==false).sort((a, b) => new Date(b.date) - new Date(a.date)));
     }
 
     return <div className="page photography">

@@ -13,7 +13,7 @@
         "title": "Duxford photography (kinda bad)",
         "thumbnail": "0.jpg",
         "date": 1712793600000,
-        "length": 5,
+        "length": 4,
         "camera": "Nikon D70",
         "lens": "Nikon 18-70mm f/3.5-4.5"
     },
@@ -36,6 +36,15 @@
         "lens": "Nikon 18-70mm f/3.5-4.5"
     },
     {
+        "type": "portrait",
+        "title": "North Macedonia",
+        "thumbnail": "0.jpg",
+        "date": 1717027200000,
+        "length": 12,
+        "camera": "Canon EOS 2000D",
+        "lens":"Canon 55-250mm f/4-5.6"
+    },
+    {
         "type": "landscape",
         "title": "Duxford Summer Airshow 2024",
         "thumbnail": "0.jpg",
@@ -51,7 +60,8 @@
         "date": 1717718400000,
         "length": 6,
         "camera": null,
-        "lens": null
+        "lens": null,
+        "visible": false
     },
     {
         "type": "landscape",
@@ -97,7 +107,8 @@
         "length": 5,        
         "camera": null,
         "lens": null,
-        "real": false
+        "real": false,
+        "visible": false
     },
     {
         "type": "landscape",
