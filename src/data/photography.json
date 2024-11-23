@@ -212,5 +212,14 @@
             "Canon 50mm f/1.8",
             "Sigma 18-50mm f/2.8"
         ]
+    },
+    {
+        "type": "portrait",
+        "title": "Alpine Dealership",
+        "thumbnail": "2.jpg",
+        "date": 1731715200000,
+        "length": 6,
+        "camera": "Canon EOS 2000D",
+        "lens": "Canon 50mm f/1.8"
     }
 ]
