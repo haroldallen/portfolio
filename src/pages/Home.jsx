@@ -46,7 +46,7 @@ export default function Home() {
         </div>
         <p className="heading">About me</p>
         <p className="paragraph">
-            I’m a 14 year old developer, designer and photographer.
+            I’m a 15 year old developer, designer and photographer.
             <br />I’m still learning but I think my stuff is pretty good.
             <br />If you’re interested in working with me, please{" "}
             <button className="notbutton link" onClick={()=>{ navigate("/contact") }}>
