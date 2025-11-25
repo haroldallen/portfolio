@@ -31,12 +31,12 @@ export default function Project() {
             <ArrowLeftIcon height={14} /> Back
         </button>
         <p className="heading subtitle">{project.name}</p>
-        <p className="heading" style={{marginTop: 0}}>Screenshots</p>
+        { project.screenshots > 0 ? <><p className="heading" style={{marginTop: 0}}>Screenshots</p>
         <div className="list screenshots">
             {photos && photos.length > 0
                 ? photos.map((_, index) => <Screenshot key={index} id={id} index={index} /> )
-                : Array.from({ length: 4 }).map((_, index) => <Screenshot key={index} /> )}
-        </div>
+                : Array.from({ length: project.screenshots }).map((_, index) => <Screenshot key={index} /> )}
+        </div></> : <></>}
         <p className="heading">About</p>
         <p className="paragraph">{project.description}</p>
         { project.link ? <>

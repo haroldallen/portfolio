@@ -101,9 +101,6 @@ svg, .half {
     flex: 1;
     width: 512px;
 }
-.list:not(.wrap) > *:nth-child(4) {
-    opacity: 0.5;
-}
 @media only screen and (max-width: 1650px) {
     .list.projects, .list.screenshots, .list.categories {
         grid-auto-flow: initial;

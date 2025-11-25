@@ -7,10 +7,8 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import { SkeletonTheme } from "react-loading-skeleton";
 
-import { PhoneIcon } from '@heroicons/react/24/outline';
 
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
 import Project from "./pages/Project";
 import Photography from "./pages/Photography";
 import PhotographyAlbum from "./pages/PhotographyAlbum";
@@ -25,7 +23,6 @@ function App() {
                 <Header />
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/contact" element={<Contact />} />
 
                     <Route path="/project/:id" element={<Project />} />
 
@@ -46,9 +43,6 @@ function Header() {
     return <nav className="header">
         <button className="notbutton title" onClick={()=>{ navigate("/") }}>
             Harold Allen
-        </button>
-        <button className="notbutton" onClick={()=>{ navigate("/contact") }}>
-            <PhoneIcon height={24} />
         </button>
     </nav>;
 }

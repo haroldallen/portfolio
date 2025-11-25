@@ -46,12 +46,8 @@ export default function Home() {
         </div>
         <p className="heading">About me</p>
         <p className="paragraph">
-            I’m a 15 year old developer, designer and photographer.
-            <br />I’m still learning but I think my stuff is pretty good.
-            <br />If you’re interested in working with me, please{" "}
-            <button className="notbutton link" onClick={()=>{ navigate("/contact") }}>
-                contact me <ArrowTopRightOnSquareIcon height={14} />
-            </button>
+            I’m a {new Date(Date.now()-new Date("2009-12-04")).getUTCFullYear()-1970} year old photographer, developer and designer from Cambridge, UK.
+            <br />If you’re interested in working with me, please contact me at <a href="mailto:hmallen.cb@gmail.com">hmallen.cb@gmail.com</a>.
         </p>
     </div>;
 }

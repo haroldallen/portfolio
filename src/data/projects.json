@@ -1,20 +1,20 @@
 [
     {
         "type": "software",
-        "id": "mindnote",
-        "name": "Mindnote",
-        "description": "Note keeping & to-do app.\nDeprecated.",
+        "id": "andromeda",
+        "name": "Andromeda",
+        "description": "The distribution solution of your dreams: a sleek, modern games and software distribution platform and developer suite, similar to Steam.",
         "link": null,
         "screenshots": 4,
         "icon": "icon.svg"
     },
     {
-        "type": "game",
-        "id": "bitternightfall",
-        "name": "Bitter Nightfall",
-        "description": "An upcoming survival/exploration game made in Unreal Engine 5.\nInspired by The Long Dark, Firewatch, and Subnautica.",
-        "link": null,
-        "screenshots": 4,
+        "type": "software",
+        "id": "metariser",
+        "name": "Metariser",
+        "description": "Metariser generates images from your photos with borders and metadata, ready for sharing on socials.\nBuilt in Python.",
+        "link": "https://github.com/haroldallen/metariser-python",
+        "screenshots": 0,
         "icon": "icon.svg"
     },
     {
@@ -23,24 +23,6 @@
         "name": "Airrec",
         "description": "Air recognition revision tool, built with React for use in the RAF Air Cadets.\nGives multiple choice and writing questions with rich customization.",
         "link": "https://airrec.hallen.uk",
-        "screenshots": 4,
-        "icon": "icon.svg"
-    },
-    {
-        "type": "software",
-        "id": "metariser",
-        "name": "Metariser",
-        "description": "Metariser generates images from your photos with borders and metadata, ready for sharing on socials.\nBuilt in Tauri.",
-        "link": "https://github.com/haroldallen/metariser-app",
-        "screenshots": 4,
-        "icon": "icon.svg"
-    },
-    {
-        "type": "software",
-        "id": "andromeda",
-        "name": "Andromeda.run",
-        "description": "Andromeda will be the distribution solution of your dreams: a sleek, modern games and software distribution platform and developer suite, similar to Steam.",
-        "link": "https://www.andromeda.run",
         "screenshots": 4,
         "icon": "icon.svg"
     }
