@@ -257,5 +257,14 @@
         "length": 9,
         "camera": "Sony A6000",
         "lens": "Sigma 30mm f/1.4"
+    },
+    {
+        "type": "portrait",
+        "title": "Mirada at the Junction #4",
+        "thumbnail": "0.jpg",
+        "date": 1766016000000,
+        "length": 11,
+        "camera": "Sony A6000",
+        "lens": "Sigma 30mm f/1.4"
     }
 ]
